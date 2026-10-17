@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #8868d3;
+    --secondary-color: #ffffff;
+    --tertiary-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.7rem;
+    display: flex;
+}
+
+
+header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+}

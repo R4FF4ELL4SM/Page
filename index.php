@@ -1,66 +1,59 @@
 <?php
-// 1. LÓGICA DO BACK-END (PHP)
-$mensagemSucesso = "";
-
-// Verifica se o formulário foi enviado através do método POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Aqui simulamos o recebimento dos dados. 
-    // Em um sistema real, você poderia salvar isso em um banco de dados.
-    $mensagemSucesso = "Relatório enviado com sucesso! O Guardião recebeu suas credenciais. Prepare sua mente...";
-}
+require_once __DIR__ . '/templates/_cabecalho.php';
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call of Cthulhu - Recrutamento PHP</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <!-- Topo / Alerta Misterioso -->
-    <header class="hero">
-        <h1>PROCURAM-SE INVESTIGADORES</h1>
-        <p class="aviso">O desaparecimento em Arkham esconde verdades que a mente humana não está pronta para suportar.</p>
-        <a href="#formulario" class="btn-cta">Aceitar o Caso</a>
-    </header>
+<main class="detalhes">
+    <ul>
+        <div class="container text-center">
+            <div class="row row-cols-2">
+                <div class="col"><h2 class="text-center">Dossiê da Investigação</h2></div>
+                <div class="col"><h2 class="text-center">Mais Informações</h2></div>
+                <div class="col">Column</div>
+                <div class="col">Column</div>
+            </div>
+        </div>
+    </ul>
 
-    <!-- Detalhes do Caso -->
-    <main class="detalhes">
-        <h2>Dossiê da Investigação</h2>
+
+
         <ul>
-            <li><strong>Sistema:</strong> Call of Cthulhu (7ª Edição)</li>
-            <li><strong>Cenário:</strong> Arkham, 1920 (Mistério e Terror Cósmico)</li>
-            <li><strong>Tecnologia:</strong> Processado nativamente com PHP 🐘</li>
-        </ul>
-    </main>
+            <div class="container text-justify" >
+                <div class="row row-cols-4">
+                    <div class="col-6"><h2 class="text-center">Dossiê da Investigação</h2></div>   
+                        
+                        <div class="col"><h2 class="text-center">Mais Informações</h2></div>
 
-    <!-- Seção do Formulário / Validação PHP -->
+                        <div class="col-6">Em 2014, um estranho meteoro cai em uma pequena fazenda isolada no interior e pouco foi divulgado sobre o assunto. Há algo estranho nesse acontecimento, você consegue sentir, mas será que está pronto para descobrir?</div>
+                        
+                        <div class="col"><strong>Sistema:</strong></div>
+                            <li>Call of Cthulhu (7ª Edição)</li>
+
+                        <div class="col-6"></div>
+
+                        <div class="col"><strong>Cenário:</strong></div>
+                            <li>Fazenda Ypê Virente, 2014 (Mistério e Horror Cósmico)</li>
+                        
+                        <div class="col-6"></div>
+
+                        <div class="col"><strong>Horários:</strong></div>
+                            <li>Sábados às 20:00h via Discord</li>  
+                </div>
+            </div>
+        </ul>
+   
+</main>
+
     <section id="formulario" class="inscricao">
         <h2>Alistamento de Jogadores</h2>
         <p>Para se alistar, clique no botão abaixo para enviar suas coordenadas criptografadas ao Mestre.</p>
 
-        <!-- Se o formulário foi enviado, exibe a mensagem de sucesso do PHP -->
-        <?php if (!empty($mensagemSucesso)): ?>
-            <div class="alerta-sucesso">
-                🐙 <?php echo $mensagemSucesso; ?>
-            </div>
-        <?php endif; ?>
-
-        <!-- Formulário HTML que aponta para a própria página PHP -->
         <form action="index.php" method="POST" class="container-link">
             <span class="subtitulo-link">Clique para confirmar sua inscrição na mesa:</span>
-            
-            <!-- Transformamos o link antigo em um botão real de envio (submit) -->
-            <button type="submit" class="btn-forms">📋 Enviar Ficha ao Guardião</button>
+ 
+            <button type="submit" class="btn-forms">Enviar Ficha ao Guardião</button>
         </form>
     </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. 🐙</p>
-    </footer>
-
-</body>
-</html>
+<?php
+require_once __DIR__ . '/templates/_rodape.php';
+?>
