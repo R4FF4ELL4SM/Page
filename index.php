@@ -7,7 +7,9 @@ require_once __DIR__ . '/templates/_cabecalho.php';
         <div class="container text-center">
             <div class="row row-cols-2">
                 <div class="col"><h2 class="text-center">Dossiê da Investigação</h2></div>
-                <div class="col"><h2 class="text-center">Mais Informações</h2></div>
+                <div class="col"><h2 class="text-center">Mais Informações</h2>
+            
+            </div>
                 <div class="col">Column</div>
                 <div class="col">Column</div>
             </div>
