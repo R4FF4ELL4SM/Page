@@ -3,17 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-    <link rel="stylesheet" href="css/style.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Call of Cthulhu</title>
 </head>
 <body>
-    
     <header>    
-        <nav class="navbar">   
-            <img scr="imgs/cth.jpg" alt="Logo Cthulhu">
+        <nav class="navbar">  
+                <img src="imgs/coc_icon.png" alt="Logo Cthulhu" class="logo">
+
+            <button class="btn btn-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul id="nav-links">    
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre Call of Cuthulhu RPG</a>
+                </li>
+                <li>
+                    <a href="#fichas">Fichas Editáveis</a>
+                </li>
+                <li>
+                    <a href="#investigacao">Dossiê da Investigação</a>
+                </li>
+                <li>
+                    <a href="#recrutamento">Recrutamento de Jogadores</a>
+                </li>
+            </ul>
+
+            <a href="#" class="btn btn-default">Mande sua Ficha</a>
         </nav>
     </header>
 
+    <main id="container">
+        <section id="inicio">
+            <img src="imgs/coc_icon_1.png" alt="cthulhu" class="img-inicio">
+            <h1 class="titulo-inicio">Procuram-se Ivestigadores!</h1>
+
+        </section>
+
+    </main>
+
+    <script src="js/scr.js"></script>
 </body>
 </html>

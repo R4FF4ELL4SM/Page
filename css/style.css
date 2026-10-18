@@ -1,30 +1,132 @@
-:root {
-    --primary-color: #8868d3;
-    --secondary-color: #ffffff;
-    --tertiary-color: #000;
-}
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Grenze Gotisch", serif;
+}
+/* Botão menu hamburguer */
+
+a.btn {
+    text-decoration: none;
 }
 
-header, footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 0.7rem;
-    display: flex;
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--cor-primaria-1);
 }
 
+.btn-mobile {
+    font-size: 1.2rem;
+
+}
+
+.btn-default {
+    background-color: var(--cor-primaria-1);
+    color: var(--cor-secundaria-1);
+
+    &:hover {
+        background-color: #58db63
+    }
+}
+
+:root {
+    --cor-neutra-1: #e9f1eb;
+    --cor-neutra-2: #0a0a0a;
+
+    --cor-primaria-1: #3dc448;
+
+    --cor-secundaria-1: #7234b0;
+}
 
 header {
-    justify-content: space-between;
-    align-items: center;
+    background-color: var(--cor-neutra-2);
+    padding: 10px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 70px;
+        }
+
+        ul {
+            display: none;
+            list-style: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            background-color: var(--cor-neutra-2);
+            left: 0;
+            padding: 1rem;
+
+            &.show {
+                display: flex
+            }
+
+            li {
+                text-align: center;
+
+                a {
+                    color: var(--cor-neutra-1);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: var(--cor-primaria-1);
+                        border-bottom: 1px solid var(--cor-secundaria-1);
+                    }
+                }
+            }
+        }
+
+        .btn-default {
+            display: none;
+        }
+    }
 }
 
-footer {
-    justify-content: center;
-    align-items: center;
+@media (min-width: 769px) {
+    header {
+        .navbar {
+            .btn-mobile {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                gap: 1rem;
+                width: auto;
+                padding: 0;
+            }
+            .btn-default {
+                display: block;
+            }
+        }
+    }
+}
+
+.img-inicio {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
