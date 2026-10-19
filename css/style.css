@@ -6,6 +6,12 @@
     box-sizing: border-box;
     font-family: "Grenze Gotisch", serif;
 }
+
+#container {
+    background-image: url('../imgs/funde.jpg');
+    background-size: contain;
+    height: 400vh;
+}
 /* Botão menu hamburguer */
 
 a.btn {
@@ -123,10 +129,44 @@ header {
     }
 }
 
-.img-inicio {
-    width: 95%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* main investigadores*/
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding: 32px 4%;
+    padding-top: clamp(0px, 5vw, 32px);
+
+    .img-inicio {
+        width: clamp(300px, 50%, 400px);
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .titulo-inicio {
+        color: var(--cor-neutra-2);
+        text-align: center;
+        font-size: clamp(3rem, 5vw, 4.3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        max-width: 700px;
+    }
+
+    .descricao-inicio {
+        color: var(--cor-neutra-2);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 550;
+        max-width: 600px;
+    }
+
 }
+
+/* Fichas */
+
+
