@@ -12,6 +12,25 @@
     background-size: contain;
     height: 400vh;
 }
+
+.titulo {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--cor-neutra-2);
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--cor-secundaria-1);
+        position: absolute;
+        bottom: 0;
+        border-radius: 30px;
+    }
+}
 /* Botão menu hamburguer */
 
 a.btn {
@@ -168,5 +187,60 @@ header {
 }
 
 /* Fichas */
+
+#ficha {
+    padding: 32px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: calc(100vh - 96px);
+
+    .sobre-cards{
+        .sobre-card{
+            position: relative;
+
+            img{
+                width: clamp(300px, 5vw, 600px);
+            }
+
+            .descricao-card-sobre {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--cor-neutra-2);
+            }
+
+            .botao-download {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                color: var(--cor-secundaria-1);
+                width: max-content;
+                margin: auto;
+         
+    
+
+                &:hover {
+                    color: var(--cor-primaria-1);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #fichas {
+        .sobre-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    }
+}
+
 
 
