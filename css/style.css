@@ -71,6 +71,8 @@ a.btn {
     --cor-secundaria-1: #7234b0;
 }
 
+/* -------------------- Navbar -------------------- */
+
 header {
     background-color: var(--cor-neutra-2);
     padding: 10px 4%;
@@ -148,7 +150,7 @@ header {
     }
 }
 
-/* main investigadores*/
+/* -------------------- main investigadores -------------------- */
 
 #inicio {
     display: flex;
@@ -186,7 +188,7 @@ header {
 
 }
 
-/* Fichas */
+/* -------------------- Fichas -------------------- */
 
 #ficha {
     padding: 32px 4%;
@@ -200,7 +202,7 @@ header {
         .sobre-card{
             position: relative;
 
-            img{
+            img {
                 width: clamp(300px, 5vw, 600px);
             }
 
@@ -229,6 +231,36 @@ header {
             }
         }
     }
+}
+
+/* -------------------- Sobre COC RPG -------------------- */
+
+#sobre {
+    padding: 32px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+
+   .sobre-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    .img-sobre {
+        width: clamp(300px, 5vw, 400px);
+    }
+
+    .sobre-info {
+        padding: 24px;
+        
+        p {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+    }
+   }
 }
 
 @media (min-width: 768px) {
