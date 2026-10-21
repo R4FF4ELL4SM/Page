@@ -22,7 +22,7 @@
 
     &::before {
         content: '';
-        display: block;
+        display: inline-block;
         width: 60px;
         height: 4px;
         background-color: var(--cor-secundaria-1);
@@ -31,7 +31,7 @@
         border-radius: 30px;
     }
 }
-/* Botão menu hamburguer */
+/* -------------------- Botão normal e menu hamburguer -------------------- */
 
 a.btn {
     text-decoration: none;
@@ -185,7 +185,6 @@ header {
         font-weight: 550;
         max-width: 600px;
     }
-
 }
 
 /* -------------------- Fichas -------------------- */
@@ -233,37 +232,6 @@ header {
     }
 }
 
-/* -------------------- Sobre COC RPG -------------------- */
-
-#sobre {
-    padding: 32px 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: calc(100vh - 96px);
-
-   .sobre-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-
-    .img-sobre {
-        width: clamp(300px, 5vw, 400px);
-    }
-
-    .sobre-info {
-        padding: 24px;
-        
-        p {
-            font-size: 1rem;
-
-   
-        }
-    }
-   }
-}
-
 @media (min-width: 768px) {
     #fichas {
         .sobre-cards {
@@ -274,6 +242,55 @@ header {
         }
     }
 }
+
+/* -------------------- Sobre COC RPG -------------------- */
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding: 32px 4%;
+    padding-top: clamp(0px, 5vw, 32px);
+
+    .img-inicio {
+        width: clamp(300px, 50%, 400px);
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding-top: clamp(0px, 5vw, 22px);
+        padding-bottom: clamp(0px, 5vw, 22px);
+    }
+
+    .descricao-inicio {
+        color: var(--cor-neutra-2);
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 550;
+        max-width: 600px;
+    }
+
+    .descricao-inicio::first-letter {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-right: 2px;
+        margin-left: 22px;
+
+        line-height: 0.8;
+    }
+}
+
+@media (max-width: 472px) {
+    #sobre {
+        .titulo {
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
 
 
 
