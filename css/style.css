@@ -11,7 +11,7 @@ body{
 }
 
 #container {
-    background-image: url('../imgs/fundo-sangue.png');
+    background-image: url('../imgs/fundo.png');
     background-size: contain;
     background-repeat: repeat-y;
     background-position: top center;
@@ -384,12 +384,30 @@ header {
 
     .descricao-inicio {
         color: var(--cor-neutra-2);
-        text-align: justify;
+        text-align: center;
         font-size: 1.1rem;
         font-weight: 550;
         max-width: 600px;
+        margin-bottom: 20px;
     }
-}
+
+    .btn-default {
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: var(--cor-primaria-1);
+        color: var(--cor-secundaria-1);
+        margin-bottom: 200px;
+
+        &:hover {
+            background-color: #58db63
+            
+        }
+        }
+    }
+
+
 
 /* --------------------- Rodape --------------------*/
 
