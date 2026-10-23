@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Meddon&display=swap');
 
 *{
     margin: 0;
@@ -20,6 +20,7 @@
     color: var(--cor-neutra-2);
     font-weight: 700;
     position: relative;
+    text-align: center;
 
     &::before {
         content: '';
@@ -32,7 +33,10 @@
         border-radius: 30px;
     }
 }
+
+
 /* -------------------- Botão normal e menu hamburguer -------------------- */
+
 
 a.btn {
     text-decoration: none;
@@ -72,7 +76,9 @@ a.btn {
     --cor-secundaria-1: #7234b0;
 }
 
+
 /* -------------------- Navbar -------------------- */
+
 
 header {
     background-color: var(--cor-neutra-2);
@@ -151,7 +157,9 @@ header {
     }
 }
 
+
 /* -------------------- main investigadores -------------------- */
+
 
 #inicio {
     display: flex;
@@ -161,6 +169,7 @@ header {
     min-height: calc(100vh - 96px);
     padding: 32px 4%;
     padding-top: clamp(0px, 5vw, 32px);
+    margin-bottom: 150px;
 
     .img-inicio {
         width: clamp(300px, 50%, 400px);
@@ -188,7 +197,9 @@ header {
     }
 }
 
+
 /* -------------------- Fichas -------------------- */
+
 
 #ficha {
     padding: 32px 4%;
@@ -197,7 +208,7 @@ header {
     align-items: center;
     gap: 32px;
     min-height: calc(100vh - 96px);
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 
     .sobre-cards{
         .sobre-card{
@@ -245,7 +256,9 @@ header {
     }
 }
 
+
 /* -------------------- Sobre COC RPG -------------------- */
+
 
 #sobre {
     display: flex;
@@ -255,6 +268,7 @@ header {
     min-height: calc(100vh - 96px);
     padding: 32px 4%;
     padding-top: clamp(0px, 5vw, 32px);
+    margin-bottom: 150px;
 
     .img-inicio {
         width: clamp(300px, 50%, 400px);
@@ -284,16 +298,9 @@ header {
     }
 }
 
-@media (max-width: 472px) {
-    #sobre {
-        .titulo {
-            text-align: center;
-            display: block;
-        }
-    }
-}
 
 /* -------------------- Dossiê da Investigação -------------------- */
+
 
 #dossie {
     display: flex;
@@ -303,13 +310,13 @@ header {
     min-height: calc(100vh - 96px);
     padding: 32px 4%;
     padding-top: clamp(0px, 5vw, 32px);
+    margin-bottom: 150px;
 
     .img-inicio {
-        width: clamp(550px, 50%, 650px);
+        width: clamp(450px, 50%, 550px);
         max-width: 500px;
         height: auto;
         display: block;
-        margin: 0 auto;
         padding-top: clamp(0px, 5vw, 22px);
         padding-bottom: clamp(0px, 5vw, 22px);
     }
@@ -323,12 +330,33 @@ header {
     }
 }
 
-@media (max-width: 481px) {
-    #dossie {
-        .titulo {
-            text-align: center;
-            display: block;
-        }
+
+/* -------------------- Recrutamento --------------------*/
+
+
+#recrutamento {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding: 32px 4%;
+    padding-top: clamp(0px, 5vw, 32px);
+    margin-bottom: 150px;
+
+    .descricao-inicio {
+        color: var(--cor-neutra-2);
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 550;
+        max-width: 600px;
     }
+}
+
+
+footer {
+        font-family: "Monsieur La Doulaise", cursive;
+        font-weight: 400;
+        font-style: normal;
 }
 
