@@ -18,6 +18,14 @@ body{
 
 }
 
+#container-2 {
+    background-image: url('../imgs/fundo.png');
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: top center;
+
+}
+
 .titulo {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -212,7 +220,6 @@ header {
     align-items: center;
     gap: 32px;
     min-height: calc(100vh - 96px);
-    margin-bottom: 150px;
 
     .sobre-cards{
         .sobre-card{
@@ -248,6 +255,23 @@ header {
             }
         }
     }
+
+    .btn-default {
+        
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: var(--cor-primaria-1);
+        color: var(--cor-secundaria-1);
+        margin-top: 30px;
+        margin-bottom: 200px;
+
+        &:hover {
+            background-color: #58db63
+            
+        }
+        }
 }
 
 @media (min-width: 768px) {
@@ -332,7 +356,7 @@ header {
         font-size: 1.1rem;
         font-weight: 550;
         max-width: 600px;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
     .subtitulo {
@@ -362,7 +386,7 @@ header {
 
 }
 
-/* -------------------- Recrutamento --------------------*/
+/* -------------------- Recrutamento -------------------- */
 
 #recrutamento {
     display: flex;
@@ -407,6 +431,80 @@ header {
         }
     }
 
+/* -------------------- Criar Ficha -------------------- */
+
+#inicio-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding: 32px 4%;
+    padding-top: clamp(0px, 5vw, 32px);
+    margin-bottom: 150px;
+
+    .img-inicio {
+        width: clamp(300px, 50%, 400px);
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .titulo-inicio {
+        color: var(--cor-neutra-2);
+        text-align: center;
+        font-size: clamp(3rem, 5vw, 4.3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        max-width: 700px;
+    }
+
+    .subtitulo {
+        text-align: center;
+        font-size: clamp(1.7rem, 1vw, 2.3rem);
+        max-width: 700px;
+        padding-top: clamp(0px, 5vw, 22px);
+        padding-bottom: clamp(0px, 5vw, 22px);
+
+    }
+
+    .descricao-inicio {
+        color: var(--cor-neutra-2);
+        text-align: justify;
+        font-size: 1.1rem;
+        font-weight: 550;
+        max-width: 600px;
+        margin-bottom: 80px;
+    }
+}
+
+/* -------------------- Atributos Principais -------------------- */
+
+#atrib {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding: 32px 4%;
+    padding-top: clamp(0px, 5vw, 32px);
+    margin-bottom: 150px;
+
+
+    .grade {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        text-align: center;
+        gap: 16px;
+        max-width: 600px;
+        margin: 40px auto;
+        font-size: 1.1rem;
+    
+
+    }
+}
 
 
 /* --------------------- Rodape --------------------*/
